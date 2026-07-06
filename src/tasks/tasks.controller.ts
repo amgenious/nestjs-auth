@@ -26,7 +26,7 @@ export class TasksController {
   }
 
   @Post()
-  @ApiOperation({ summary: 'Create a new user' })
+  @ApiOperation({ summary: 'Create a new task' })
   create(@CurrentUser() user: User, @Body() dto: CreateTaskDto) {
     return this.tasksService.create(user.id, dto);
   }

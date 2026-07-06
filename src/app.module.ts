@@ -9,6 +9,7 @@ import { JwtAuthGuard } from './common/guards/jwt-auth.guard';
 import { JwtModule } from '@nestjs/jwt';
 import { AdminModule } from './admin/admin.module';
 import { TasksModule } from './tasks/tasks.module';
+import { NotesModule } from './notes/notes.module';
 
 
 @Module({
@@ -27,7 +28,8 @@ import { TasksModule } from './tasks/tasks.module';
     AuthModule,
     UsersModule,
     AdminModule,
-    TasksModule
+    TasksModule,
+    NotesModule
   ],
   providers: [
     { provide: APP_GUARD, useClass: ThrottlerGuard },
